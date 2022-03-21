@@ -1,5 +1,6 @@
 <div style="width: 400px; margin: auto;">
     <div class="submit-form">
+      <h2>Enviar imagen</h2>
       <div *ngIf="!submitted">
         <div class="form-group">
           <label for="ID_Local">ID Local</label>
@@ -14,13 +15,11 @@
         </div>
         <div class="form-group">
           <label for="Fecha">Fecha</label>
-          <input
-            class="form-control"
-            id="Fecha"
-            required
-            [(ngModel)]="InputData.Fecha"
-            name="Fecha"
-          />
+          <input placeholder="Select date" type="date" id="example" class="form-control" class="form-control"
+          id="Fecha"
+          required
+          [(ngModel)]="InputData.Fecha"
+          name="Fecha">
         </div>
         <div class="form-group">
             <label for="UrlImagen">Url Imagen</label>
@@ -31,6 +30,13 @@
               [(ngModel)]="InputData.UrlImagen"
               name="UrlImagen"
             />
+            <label class="image-upload-container btn btn-bwm">
+              <span>Select Image</span>
+              <input #imageInput
+                     type="file"
+                     accept="image/*"
+                     (change)="processFile(imageInput)">
+            </label>
           </div>
         <button (click)="saveInputData()" class="btn btn-success">Enviar</button>
       </div>
