@@ -37,7 +37,7 @@
             <a class="dropdown-item" *ngIf="isNotLogged" href="/login">Iniciar Sesión</a>
             <a class="dropdown-item" *ngIf="isNotLogged" href="/sign-up">Registrarse</a>
             <a class="dropdown-item" *ngIf="!isNotLogged" href="/add">Añadir Imagen</a>
-            <a class="dropdown-item" *ngIf="!isNotLogged" href="#">Registrar Un Local</a>
+            <a class="dropdown-item" *ngIf="!isNotLogged" href="/add-local">Registrar Un Local</a>
             <a class="dropdown-item" *ngIf="!isNotLogged" (click)="logOut()">Cerrar sesión</a>
           </div>
         </li>

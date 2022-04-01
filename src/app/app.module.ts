@@ -11,6 +11,7 @@ import { AhysListComponent } from './components/ahys-list/ahys-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import Amplify, { Auth } from 'aws-amplify';
+import { AddLocalsComponent } from './components/add-locals/add-locals.component';
 
 Amplify.configure({
   Auth:{
@@ -29,7 +30,8 @@ Amplify.configure({
     AddInputdataComponent,
     AhysListComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    AddLocalsComponent
   ],
   imports: [ 
     BrowserModule,
