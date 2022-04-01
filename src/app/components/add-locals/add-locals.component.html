@@ -1,0 +1,45 @@
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+      <h2>Añade un local</h2>
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="Nombre_Local">Nombre del local</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nombre_Local"
+            required
+            [(ngModel)]="Local.Nombre_Local"
+            name="Nombre_Local"
+          />
+        </div>
+        <div class="form-group">
+            <label for="Aforo_Max">Aforo maximo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Aforo_Max"
+              required
+              [(ngModel)]="Local.Aforo_Max"
+              name="Aforo_Max"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Direccion">Dirección</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Direccion"
+              required
+              [(ngModel)]="Local.Direccion"
+              name="Direccion"
+            />
+          </div>
+        <button (click)="saveInputData()" class="btn btn-success">Enviar</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>¡Envio exitoso!</h4>
+        <button class="btn btn-success" (click)="newInputData()">Añadir</button>
+      </div>
+    </div>
+  </div>

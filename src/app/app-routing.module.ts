@@ -7,6 +7,7 @@ import { AddInputdataComponent } from './components/add-inputdata/add-inputdata.
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
+import { AddLocalsComponent } from './components/add-locals/add-locals.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full',  redirectTo: 'ahys'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'add', component: AddInputdataComponent},
-  {path: 'ahys', component: AhysListComponent}
+  {path: 'ahys', component: AhysListComponent},
+  {path:'add-local', component: AddLocalsComponent}
 ];
 
 @NgModule({
